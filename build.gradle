@@ -53,7 +53,7 @@ dependencies {
 	//compile 'edu.ucar:netcdf4:4.6.2'
 	// grib reader:
 	//compile 'edu.ucar:grib:4.6.2'
-	//compile 'edu.ucar:cdm:4.6.2'
+	compile 'edu.ucar:cdm:4.6.2'
 	
 	// utilities    
 	//compile 'gov.nist.math:jama:1.0.3'
