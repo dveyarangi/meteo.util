@@ -1,4 +1,4 @@
-package meteo.common.util.geodesy;
+package meteo.util.geodesy;
 
 public class GeoPos 
 {

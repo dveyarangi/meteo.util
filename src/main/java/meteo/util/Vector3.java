@@ -1,10 +1,10 @@
-package meteo.common.util;
+package meteo.util;
 
 import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
-import meteo.common.util.geodesy.PolarCoord;
+import meteo.util.geodesy.PolarCoord;
 
 public class Vector3 implements Serializable
 {

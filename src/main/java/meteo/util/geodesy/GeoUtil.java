@@ -1,7 +1,7 @@
-package meteo.common.util.geodesy;
+package meteo.util.geodesy;
 
-import meteo.common.util.Angles;
-import meteo.common.util.Vector3;
+import meteo.util.Angles;
+import meteo.util.Vector3;
 
 public class GeoUtil
 {

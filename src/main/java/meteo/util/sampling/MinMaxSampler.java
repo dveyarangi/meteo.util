@@ -1,4 +1,4 @@
-package meteo.common.util.sampling;
+package meteo.util.sampling;
 
 import lombok.Getter;
 /**

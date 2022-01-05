@@ -1,4 +1,4 @@
-package meteo.common.util.sampling;
+package meteo.util.sampling;
 /**
  * Naive implementation of down sample with simple array input.
  * Copes gracefully with nulls by preserving them.

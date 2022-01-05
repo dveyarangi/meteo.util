@@ -1,4 +1,4 @@
-package meteo.common.util.geodesy;
+package meteo.util.geodesy;
 
 
 public abstract class Datum {
@@ -27,17 +27,26 @@ public abstract class Datum {
 		
 		
 	};
-	public static Datum SPHERICAL = new Datum() 
+
+	
+	public static class SphericalDatum extends Datum 
 	{
 		public static final double EARTH_RADIUS_KM = 6378;
+		
+		private double radius;
+		public SphericalDatum(double radius)
+		{
+			this.radius = radius;
+		}
+		public SphericalDatum() { this(EARTH_RADIUS_KM); }
 
 		@Override
-		public double getEquatorialRadius() { return EARTH_RADIUS_KM; }
+		public double getEquatorialRadius() { return radius; }
 
 		@Override
-		public double getPolarRadius() { return EARTH_RADIUS_KM; }
+		public double getPolarRadius() { return radius; }
 		@Override
-		public String getName() { return "SPHERICAL"; }
+		public String getName() { return "SPHERICAL(" + radius + ")"; }
 
 		
 	};	

@@ -1,4 +1,4 @@
-package meteo.common.util;
+package meteo.util;
 
 public class TextUtil
 {

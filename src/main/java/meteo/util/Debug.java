@@ -1,4 +1,4 @@
-package meteo.common.util;
+package meteo.util;
 
 import org.slf4j.Logger;
 
@@ -24,11 +24,8 @@ public class Debug
 
 		double f = Math.pow( 10, fractions );
 		double val =  Math.round(percent*f) / f;
-		/*		if(percent*f == Math.round(percent*f))
-		{
-			log(sb.append(DONE_).append( percent ).append( PERCENT ).append( ELLIPSIS ));
-		} */
-		log(sb.append(preffix).append(__).append(DONE_).append( x ).append( _OF_ ).append( y )
+
+		log.debug(sb.append(preffix).append(__).append(DONE_).append( x ).append( _OF_ ).append( y )
 				.append(__)
 				.append( val ).append(PERCENT).toString());
 	}

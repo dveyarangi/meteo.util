@@ -1,7 +1,7 @@
-package meteo.common.util.geodesy;
+package meteo.util.geodesy;
 
-import meteo.common.util.IParametricSurface;
-import meteo.common.util.Vector3;
+import meteo.util.IParametricSurface;
+import meteo.util.Vector3;
 
 /**
  * 

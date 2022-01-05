@@ -1,4 +1,4 @@
-package meteo.common.util;
+package meteo.util;
 
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
