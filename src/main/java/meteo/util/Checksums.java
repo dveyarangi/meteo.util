@@ -1,5 +1,6 @@
 package meteo.util;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -8,6 +9,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.DigestInputStream;
@@ -95,9 +97,16 @@ public class Checksums
 	{
 		
 		try (InputStream is = Files.newInputStream(Paths.get(filename));
-		     DigestInputStream dis = new DigestInputStream(is, md)) 
+		     DigestInputStream dis = new DigestInputStream(is, md);
+				BufferedReader bis = new BufferedReader(new InputStreamReader(dis))) 
 		{
-		  /* Read decorated stream (dis) to EOF as normal... */
+			String line = null;
+			while((line = bis.readLine()) != null)
+			{
+				/* Read decorated stream (dis) to EOF as normal... */				
+			}
+
+		  
 		}
 		
 		byte[] digest = md.digest();
