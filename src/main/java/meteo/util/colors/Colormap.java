@@ -94,16 +94,19 @@ public class Colormap
 	public Color toColor(float value, Color result) 
 	{ 
 		Color color;
+
 		if( Float.isNaN( value ))
 		{
 			color = conf.empty;
 			result.set( color );
 			return result;
 		}
+
+		float normVal = ( value - min ) / (max-min);
 		
 		int colorNum = colors.size();
 
-		if( value <= min || value < colors.get( 0 ).value)
+		if( value <= min || normVal < colors.get( 0 ).value)
 		{
 			// value below minimum for this colorscale
 			color = this.colorBelow( 0 );
@@ -111,14 +114,13 @@ public class Colormap
 			return result;
 		}
 		
-		if( value >= max || value > colors.get( colors.size()-1 ).value) // value above maximum for this colorscale
+		if( value >= max || normVal > colors.get( colors.size()-1 ).value) // value above maximum for this colorscale
 		{
 			color = this.colorAbove( colorNum-1 );
 			result.set(color);
 			return result;
 		}
 		// picking color
-		float normVal = ( value - min ) / (max-min);
 
 		// locate lower index:
 		int idx = 0;

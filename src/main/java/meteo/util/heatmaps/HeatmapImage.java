@@ -23,7 +23,7 @@ import meteo.util.colors.Colormaps;
 public class HeatmapImage
 {
 
-	static ColormapConf DEFAULT_COLORMAP;
+	public static ColormapConf DEFAULT_COLORMAP;
 	static {
 		try (InputStream in = HeatmapImage.class.getResourceAsStream("Chromatic")){
 			DEFAULT_COLORMAP = Colormaps.read(new InputStreamReader(in));
