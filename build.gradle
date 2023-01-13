@@ -7,7 +7,7 @@ version = '1.0'
 
 project.ext.projectName = 'meteo.util'
 project.ext.lwjglVersion = "2.9.2"
-project.ext.geotoolsVersion = "13.2"
+project.ext.geotoolsVersion = "26.0"
 project.ext.gdxVersion = "1.7.1"
 
 
